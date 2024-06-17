@@ -1,0 +1,37 @@
+.parent{
+  /*1-6 line center a div*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  text-align:left ;
+  border: 2px soild black;
+}
+.panel{
+  max-width: 700px;
+}
+.accordion-container{
+  background-color: darkgray;
+  padding:40px;
+  min-width: 800px;
+  min-height: 200px;
+}
+.panel{
+  display: none;
+}
+.active{
+  display: block;
+}
+
+.accordion{
+  display: flex;
+  justify-content: space-between;
+}
+.accordion:hover{
+ background-color: burlywood;
+}
+
+.sort-arrow-active{
+  transform: rotate(-180deg);
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/8d2cffbe4d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="accordion.css" />
+    <title>Accordion</title>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="accordion-container">
+            <div class="accordion"><span>Accordion 1</span><span><i class="fa-solid fa-arrow-down"></i></span></div>
+            <div class="panel">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
+                    dolorem, porro totam dolor sapiente harum. Iste nam dolore sapiente
+                    minus, accusantium fuga magni alias laboriosam soluta?
+                </p>
+            </div>
+
+            <div class="accordion"><span>Accordion 2</span><span><i class="fa-solid fa-arrow-down"></i></span></div>
+            <div class="panel">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
+                    dolorem, porro totam dolor sapiente harum. Iste nam dolore sapiente
+                    minus, accusantium fuga magni alias laboriosam soluta?
+                </p>
+            </div>
+
+            <div class="accordion"><span>Accordion 3</span><span><i class="fa-solid fa-arrow-down"></i></span></div>
+            <div class="panel">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
+                    dolorem, porro totam dolor sapiente harum. Iste nam dolore sapiente
+                    minus, accusantium fuga magni alias laboriosam soluta?
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const accordion = document.querySelectorAll(".accordion");
+        const panel = document.querySelectorAll(".panel");
+        const arrow = document.querySelectorAll(".fa-solid")
+        for (let i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener("click", function () {
+                panel[i].classList.toggle('active')
+                arrow[i].classList.toggle("sort-arrow-active")
+                for (let j = 0; j < panel.length; j++) {
+                    if (i !== j)
+                    {
+                        panel[j].classList.remove('active')
+                        arrow[j].classList.remove('sort-arrow-active')
+                    }
+                        
+
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
