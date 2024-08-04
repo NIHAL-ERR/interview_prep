@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8d2cffbe4d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="strarrating.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Star ratting</h1>
+    <div class="container">
+        <div class="star"><i class="fa-regular fa-star"></i></div>
+        <div class="star"><i class="fa-regular fa-star"></i></div>
+        <div class="star"><i class="fa-regular fa-star"></i></div>
+        <div class="star"><i class="fa-regular fa-star"></i></div>
+        <div class="star"><i class="fa-regular fa-star"></i></div>
+    </div>
+    <script>
+     const arr = document.getElementsByClassName('star');
+     const arr2 = document.getElementsByClassName('fa-star')
+     for(let i =0;i<arr.length;i++)
+     {
+         let prev=-1
+         arr[i].addEventListener('click',function(){
+           
+            for(let j =0;j<arr.length;j++)
+            {
+            console.log(arr2)
+              arr2[j].classList.remove('fa-solid');
+              arr2[j].classList.add('fa-regular');
+            }
+            for(let j =0;j<=i;j++)
+            {
+              arr2[j].classList.add('fa-solid');
+              arr2[j].classList.remove('fa-regular');
+              prev = j;
+            }
+        })
+     }
+    </script>
+</body>
+
+</html>
